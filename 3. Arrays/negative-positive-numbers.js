@@ -4,16 +4,14 @@ function print(arr){
     for (let index = 0; index < arr.length; index++) {
         if(arr[index]<0){
            newArr.unshift(arr[index]);
-        }
-        
-    }
-    for (let index = 0; index < arr.length; index++) {
-        if(arr[index]>=0){
+        } 
+        else if(arr[index]>=0){
             newArr.push(arr[index]);
         }
         
     }
-
+    
+        
     for (let index = 0; index < newArr.length; index++) {
        
         console.log(newArr[index]); 

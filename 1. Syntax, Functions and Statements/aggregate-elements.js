@@ -9,7 +9,7 @@ function calculate(array){
     array.forEach(element => {
         reverseSum+=1/element;
     });
-    console.log(reverseSum.toFixed(4));
+    console.log(reverseSum);
 
 
     let string='';
@@ -20,4 +20,3 @@ function calculate(array){
 
 }
 
-calculate([2,4,8,16]);
