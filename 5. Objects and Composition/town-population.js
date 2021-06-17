@@ -4,17 +4,15 @@ function print(arr){
     
     arr.forEach(string => {
         
-        
+        let key = string.split(' <-> ')[0];
+        let value = Number(string.split(' <-> ')[1]);
 
-        let name = string.split(' <-> ')[0];
-        let population = Number(string.split(' <-> ')[1]);
-
-        if(cities[name]){
-            cities[name]+=population;
+        if(cities[key]){
+            cities[key]+=value;
         }
         else{
             
-            cities[name]=population;
+            cities[key]=value;
             
         }
     });
@@ -24,9 +22,3 @@ function print(arr){
         console.log(city + ' : ' + cities[city] );
     };
 }
-
-
-
-
- 
-    
