@@ -1,3 +1,8 @@
 function showText() {
-    // TODO
+    
+
+    let hiddenText = document.querySelector('#text');
+    document.querySelector('#more').style.display='none';
+    document.querySelector('#text').style.display = 'inline';
+    
 }
