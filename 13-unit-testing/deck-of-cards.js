@@ -1,7 +1,21 @@
-function solve(cards){
+function printDeck(cards){
 
     let resultString ='';
-    function solve(){
+    let isInvalid = false;
+    cards.forEach(element => {
+        let face = '';
+        let suit = '';
+        
+        if(element.length==3){
+            face = element[0]+element[1];
+            suit = element[2];
+        }
+        else{
+            face=element[0];
+            suit=element[1];
+        }
+    createCard(face,suit)
+    function createCard(face,suit){
         let result = '';
     
         switch(face){
@@ -13,11 +27,13 @@ function solve(cards){
             case'7':break;
             case'8':break;
             case'9':break;
+            case'10':break;
             case'J':break;
             case'Q':break;
             case'K':break;
             case'A':break;
-            default:throw Error('Error');return;
+            default:isInvalid=true;
+                console.log(`Invalid card: ${element}`);
         }
         result+=face;
         switch(suit){
@@ -25,12 +41,25 @@ function solve(cards){
             case'H':result+= '\u2665' ;break;
             case'D':result+= '\u2666' ;break;
             case'C':result+= '\u2663' ;break;
-            default:throw Error('Error');return;
+            default: isInvalid=true;
+                console.log(`Invalid card: ${element}`);
         }
+
+
     
-        return result;
+        resultString+= result+' ';
         
     }
+
     
     
+});
+
+if(isInvalid==true){
+    return;
 }
+else{
+    console.log(resultString);
+}  
+}
+
