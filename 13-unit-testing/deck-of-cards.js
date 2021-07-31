@@ -62,4 +62,3 @@ else{
     console.log(resultString);
 }  
 }
-
